@@ -1,0 +1,6 @@
+trees: 100
+learn_rt: 0.15
+max_dep: 6
+min_chld_wght: 1
+colsample: 0.5
+subsmpl: 0.5

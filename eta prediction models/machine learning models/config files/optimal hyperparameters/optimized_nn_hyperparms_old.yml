@@ -1,0 +1,8 @@
+hidden_layer_sizes1_inp: 22
+hidden_layer_sizes2_inp: 63
+activation_inp: tanh
+alpha_inp: 0.000243
+learning_rate_inp: adaptive
+solver_inp: adam
+max_iter_inp: 1000000
+

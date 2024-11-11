@@ -1,0 +1,7 @@
+Parameter,Parameter Value
+Plot name,actual_vs_pred
+plot number,0
+plot type,scatter
+plot title,Actual time of arrival - Predicted ETA
+x label,Predicted ETA(minutes)
+y label,Actual time of arrival(minutes)

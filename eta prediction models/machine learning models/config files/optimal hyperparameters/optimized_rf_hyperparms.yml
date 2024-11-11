@@ -1,0 +1,6 @@
+trees: 100
+max_feat: sqrt
+max_dep: 40
+bootstrap: False
+min_smpl_splt: 5
+min_smpl_lf: 4

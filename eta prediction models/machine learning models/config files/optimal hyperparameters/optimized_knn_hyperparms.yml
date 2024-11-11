@@ -1,0 +1,6 @@
+algorithm_inp: ball_tree
+leaf_size_inp: 30 
+n_neighbors_inp: 4
+p_inp: 1
+weights_inp: distance
+

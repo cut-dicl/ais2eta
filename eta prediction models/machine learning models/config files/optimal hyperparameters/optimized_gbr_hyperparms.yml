@@ -1,0 +1,6 @@
+trees: 80
+learn_rt: 0.05
+max_dep: 15
+min_smpl_splt: 1200
+max_feat: sqrt
+subsmpl: 0.8

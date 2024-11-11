@@ -1,0 +1,7 @@
+metric name,name in cross_validate function
+explained variance score,explained_variance
+coefficient of determination,r2
+max error,max_error
+mean absolute error,neg_mean_absolute_error
+mean squared error,neg_mean_squared_error
+root mean squared error,neg_root_mean_squared_error

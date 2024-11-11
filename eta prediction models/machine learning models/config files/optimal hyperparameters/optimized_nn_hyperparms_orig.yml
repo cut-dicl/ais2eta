@@ -1,0 +1,7 @@
+hidden_layer_sizes1_inp: 100
+hidden_layer_sizes2_inp: 1
+activation_inp: relu
+alpha_inp: 0.0001
+learning_rate_inp: adaptive
+solver_inp: adam
+max_iter_inp: 1000000

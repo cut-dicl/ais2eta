@@ -1,0 +1,8 @@
+splitter_inp : best
+max_depth_inp : 15
+min_samples_split_inp : 200
+min_samples_leaf_inp : 100
+min_weight_fraction_leaf_inp : 0.0
+max_features_inp : 4
+ccp_alpha_inp : 0.0
+

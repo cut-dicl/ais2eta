@@ -5,7 +5,7 @@ This project implements and tests several machine learning algorithms coded for 
 
 ## Dataset 
 
-The dataset is contained in the file all_data_final.csv located in the `"dataset generation python code"` folder. The dataset contains 1 million AIS data points collected during July and August for vessels with portcalls at the main ports of Cyprus.
+The dataset is contained in the file all_data_final.csv located in the `"dataset generation python code"` folder. The dataset contains 1 million AIS data points collected during July and August for vessels with portcalls at the main ports of Cyprus. Make sure to unzip the dataset before using it.
 
 ## Executables  
 
