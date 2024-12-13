@@ -19,7 +19,7 @@ search = GridSearchCV(estimator=model,
                       param_grid=search_grid,
                       scoring=eval_metr,
                       cv=cv,n_jobs=-1,verbose=3)
-x, y = get_and_pre_process_dataset.load_and_prepare_dataset(get_invalid_eta_as_null = False,eta_in_hours=True)
+x, y = get_and_pre_process_dataset.load_and_prepare_dataset(get_invalid_eta_as_null = False,eta_in_hours=True, "evmides")
 search.fit(x, y)
 
 print(search.best_params_)

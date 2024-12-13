@@ -2,7 +2,7 @@
 """
 Created on Sun Oct 24 09:45:35 2021
 
-@author: Brian
+@author: Nicos Evmides
 """
 from pathlib import Path
 import get_and_pre_process_dataset
@@ -146,10 +146,10 @@ def main():
     # p1 : kolley et al.  : nnp1, knnp1, dprp1
     # p2 : flapper et al. : gbrp2
     # p3 : parolas et al. : nnp3
-    
-    mdl_nm, cv = "nnp1", 10
+
+    mdl_nm, cv = "dtr", 10
     x, y, test_fold = get_and_pre_process_dataset.load_and_prepare_dataset(
-        get_invalid_eta_as_null=False, eta_in_hours=1)
+        get_invalid_eta_as_null=False, eta_in_hours=1, paper='evmides')
     ps = PredefinedSplit(test_fold)
     cv = ps
     print ("Getting Dataset...Done!")

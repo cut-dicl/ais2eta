@@ -2,7 +2,7 @@
 """
 Created on Sun Oct 24 09:45:35 2021
 
-@author: Brian
+@author: Nicos Evmides
 """
 from pathlib import Path
 import get_and_pre_process_dataset
@@ -12,6 +12,7 @@ import pandas as pd
 from sklearn.model_selection import cross_validate, cross_val_predict
 from matplotlib import rcParams
 from sklearn.feature_selection import RFECV
+from sklearn.model_selection import PredefinedSplit
 
 
 #import sys
@@ -100,7 +101,7 @@ def map_feature_with_importance_or_rank(regressor_feature_importances,
 
 def get_feature_importances(mach_learn_mdl, x, y, cv):
     selector = RFECV(mach_learn_mdl, step=1, cv=cv)
-    x, y = get_and_pre_process_dataset.load_and_prepare_dataset(get_invalid_eta_as_null = False,eta_in_hours=True)
+    x, y = get_and_pre_process_dataset.load_and_prepare_dataset(get_invalid_eta_as_null = False,eta_in_hours=True, paper="parolas")
     selector = selector.fit(x, y)
     feature_support_status = map_feature_with_importance_or_rank(
         selector.support_, x)
@@ -142,8 +143,10 @@ def store_cross_valiadation_rslts(mdl_nm, cv, scores):
 
 def main():
     mdl_nm, cv = "nn", 10
-    x, y = get_and_pre_process_dataset.load_and_prepare_dataset(
-        get_invalid_eta_as_null=False, eta_in_hours=1)
+    x, y, test_fold = get_and_pre_process_dataset.load_and_prepare_dataset(
+        get_invalid_eta_as_null=False, eta_in_hours=1, paper="parolas")
+    ps = PredefinedSplit(test_fold)
+    cv = ps
     print ("Getting Dataset...Done!")
     mach_learn_mdl = ML_models.get_tuned_model(mdl_nm)
     print ("Getting Model...Done!")

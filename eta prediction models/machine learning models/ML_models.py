@@ -2,14 +2,14 @@
 """
 Created on Sun Oct 24 09:45:35 2021
 
-@author: Brian
+@author: Nicos Evmides & Brian
 """
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 import yaml
 from xgboost import XGBRegressor
 from sklearn.svm import SVR
 from sklearn.neural_network import MLPRegressor
-#from sklearn.gaussian_process import GaussianProcessRegressor 
+#from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
@@ -20,7 +20,7 @@ hyperparameters_cnfg_dir = rf"{curr_dir}/config files/optimal hyperparameters"
 
 
 
-def get_dtr_model(splitter_inp, max_depth_inp, min_samples_split_inp, min_samples_leaf_inp, min_weight_fraction_leaf_inp, max_features_inp, ccp_alpha_inp): 
+def get_dtr_model(splitter_inp, max_depth_inp, min_samples_split_inp, min_samples_leaf_inp, min_weight_fraction_leaf_inp, max_features_inp, ccp_alpha_inp):
     mach_learn_mdl = DecisionTreeRegressor(
 	splitter = splitter_inp,
 	max_depth = max_depth_inp,
@@ -33,7 +33,7 @@ def get_dtr_model(splitter_inp, max_depth_inp, min_samples_split_inp, min_sample
     return mach_learn_mdl
 
 
-def get_dtrp1_model(splitter_inp, max_depth_inp, min_samples_split_inp, min_samples_leaf_inp, min_weight_fraction_leaf_inp, max_features_inp, ccp_alpha_inp): 
+def get_dtrp1_model(splitter_inp, max_depth_inp, min_samples_split_inp, min_samples_leaf_inp, min_weight_fraction_leaf_inp, max_features_inp, ccp_alpha_inp):
     mach_learn_mdl = DecisionTreeRegressor(
 	splitter = splitter_inp,
 	max_depth = max_depth_inp,
@@ -47,20 +47,20 @@ def get_dtrp1_model(splitter_inp, max_depth_inp, min_samples_split_inp, min_samp
 
 def get_knn_model(n_neighbors_inp, weights_inp, algorithm_inp, leaf_size_inp, p_inp):
     mach_learn_mdl = KNeighborsRegressor(
-    	n_neighbors=n_neighbors_inp, 
+    	n_neighbors=n_neighbors_inp,
 	weights=weights_inp,
- 	algorithm=algorithm_inp, 
-	leaf_size=leaf_size_inp, 
+ 	algorithm=algorithm_inp,
+	leaf_size=leaf_size_inp,
 	p=p_inp
 	)
     return mach_learn_mdl
 
 def get_knnp1_model(n_neighbors_inp, weights_inp, algorithm_inp, leaf_size_inp, p_inp):
     mach_learn_mdl = KNeighborsRegressor(
-    	n_neighbors=n_neighbors_inp, 
+    	n_neighbors=n_neighbors_inp,
 	weights=weights_inp,
- 	algorithm=algorithm_inp, 
-	leaf_size=leaf_size_inp, 
+ 	algorithm=algorithm_inp,
+	leaf_size=leaf_size_inp,
 	p=p_inp
 	)
     return mach_learn_mdl
